@@ -1,0 +1,137 @@
+/* ====== HEADER GENERAL ====== */
+.header {
+  width: 100%;
+  background-color: #031436;
+  /* background: linear-gradient(
+    180deg,
+    #011947 0%,
+    #1b2d4f 30%,
+    #485164 50%,
+    #1b2d4f 70%,
+    #011947 100%
+  ); */
+
+  /* background: linear-gradient(
+    180deg,
+    #011947 -24% 15%,
+    #485164 40% 40%,
+    #011947
+  ); */
+  /* background: linear-gradient(
+    180deg,
+    #025373 44%,
+    #f2f2f0 166% -24%,
+    #025373 -269%
+  ); */
+  padding: 0.2rem 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 0 0 10px 0; */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.header__logo img {
+  width: 220px;
+  height: auto;
+  margin-left: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  /* background-image: -moz-element(#ffffff); */
+}
+.header__logo-img {
+  filter: drop-shadow(5px 0px 6px #dad9d9);
+}
+
+.header__logo img:hover {
+  transform: scale(1.04);
+}
+
+/* Botón Login */
+.login-btn {
+  background-color: #d9631e;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #f2f2f0;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+  background-color: #d85307;
+  transform: translateY(-2px);
+}
+
+/* ====== HAMBURGUESA ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger div {
+  width: 28px;
+  height: 3px;
+  background: #f2f2f0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ====== OVERLAY ====== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 31, 89, 0.75);
+  z-index: 900;
+  transition: opacity 0.3s ease;
+}
+
+/* ====== RESPONSIVE HEADER ====== */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.6rem 1rem;
+  }
+
+  .login-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header__logo img {
+    width: 180px;
+  }
+}

@@ -1,0 +1,92 @@
+/* ====== NAVBAR GENERAL (DESKTOP) ====== */
+.header__nav {
+  display: flex;
+  align-items: center;
+  font-family: "Kamikzom", sans-serif;
+  letter-spacing: 2.5px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #f2f2f0; /* blanco grisáceo */
+  font-size: 1.05rem;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #d9631e; /* naranja quemado */
+  transition: width 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #ffffff;
+}
+
+.nav-list li a:hover::after,
+.nav-list li a.active-link::after {
+  width: 100%;
+}
+
+/* ====== OCULTAR ELEMENTOS SOLO EN MOBILE ====== */
+.only-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .only-mobile {
+    display: none;
+  }
+}
+
+/* ====== NAVBAR RESPONSIVE (MOBILE) ====== */
+@media (max-width: 768px) {
+  .header__nav {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100%;
+    background: #021f59; /* azul oscuro */
+    padding-top: 80px;
+    gap: 2rem;
+    z-index: 2000;
+    transition: right 0.5s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .header__nav.active {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav-list li a {
+    font-size: 1.3rem;
+    color: #f2f2f0;
+  }
+
+  .nav-list li a::after {
+    background: #d9631e;
+  }
+}

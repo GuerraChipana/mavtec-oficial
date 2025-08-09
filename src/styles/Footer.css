@@ -1,0 +1,171 @@
+/* ======================
+   Footer Styles - MAVTEC
+   ====================== */
+.footer-container {
+  background-color: var(--color-azul-oscuro, #021f59);
+  color: var(--color-blanco-gris, #f2f2f0);
+  padding: 3rem 2rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ===== LOGO ===== */
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 50px 9px 10px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo-texts {
+  font-size: 0.95rem;
+  color: var(--color-blanco-gris, #f2f2f0);
+  opacity: 0.85;
+}
+
+.footer-slogan {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ===== COLUMNAS ===== */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-naranja, #d9631e);
+  padding-bottom: 0.4rem;
+  color: var(--color-naranja, #d9631e);
+}
+
+/* ===== LINKS ===== */
+.footer-card-link {
+  margin-bottom: 0.6rem;
+}
+
+.footer-card-link a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--color-blanco-gris, #f2f2f0);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-card-link a:hover {
+  color: var(--color-naranja, #d9631e);
+  transform: translateX(4px);
+}
+
+.active-link {
+  color: var(--color-naranja, #d9631e);
+  font-weight: 600;
+}
+
+/* ===== CONTACTO ===== */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+}
+
+.footer-contact-icon.whatsapp {
+  color: #07c84e;
+}
+.footer-contact-icon.email {
+  color: var(--color-azul-claro, #ffffff);
+}
+.footer-contact-icon.phone {
+  color: var(--color-naranja, #04b4ff);
+}
+
+.footer-contact-texts strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-contact-texts span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-contact-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--color-naranja, #d9631e);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== REDES ===== */
+.footer-social-card {
+  margin-bottom: 0.6rem;
+}
+
+.footer-social-card a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-blanco-gris, #f2f2f0);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-card a:hover {
+  background-color: var(--color-naranja, #d9631e);
+  transform: translateY(-3px);
+}
+
+/* ===== BOTTOM ===== */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 2rem 1rem;
+  }
+  .footer-logo {
+    width: 130px;
+  }
+}
