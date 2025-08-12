@@ -1,36 +1,40 @@
-/* ====== HEADER GENERAL ====== */
-.header {
-  width: 100%;
-  background-color: #031436;
-  /* background: linear-gradient(
-    180deg,
-    #011947 0%,
-    #1b2d4f 30%,
-    #485164 50%,
-    #1b2d4f 70%,
-    #011947 100%
-  ); */
 
-  /* background: linear-gradient(
-    180deg,
-    #011947 -24% 15%,
-    #485164 40% 40%,
-    #011947
-  ); */
-  /* background: linear-gradient(
-    180deg,
-    #025373 44%,
-    #f2f2f0 166% -24%,
-    #025373 -269%
-  ); */
+:root {
+  --header-height: 100px;
+}
+
+/* header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--azul-oscuro);
+  z-index: 1000;
+} */
+
+
+/* ====== HEADER GENERAL ====== */
+ .header {
+  width: 100%;
+  left: 0;
+  height: var(--header-height);
+  background-color: rgb(2, 12, 33);
   padding: 0.2rem 2rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
-  /* border-radius: 0 0 10px 0; */
 }
+
+/* Cuando se scrollea */
+.header.scrolled {
+  background-color: rgba(3, 12, 30, 0.833); /* Más transparente */
+  backdrop-filter: blur(6px); /* Efecto difuminado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 .header-container {
   display: flex;
@@ -42,20 +46,22 @@
 
 /* Logo */
 .header__logo img {
-  width: 220px;
-  height: auto;
-  margin-left: 8px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  /* background-image: -moz-element(#ffffff); */
+    width: 210px;
+    height: 126px;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin: -10PX 0;
+    transition: transform 0.3s ease;
 }
-.header__logo-img {
-  filter: drop-shadow(5px 0px 6px #dad9d9);
+.header__logo{
+  margin-left: 18px
 }
 
 .header__logo img:hover {
   transform: scale(1.04);
+  
 }
+
 
 /* Botón Login */
 .login-btn {

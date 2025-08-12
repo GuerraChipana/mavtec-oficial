@@ -5,7 +5,7 @@ import '../styles/Home.css'
 function Home() {
   return (
 
-    <div>
+    <div >
       <Slider />
       <section className="home-intro">
         <div className="intro-content">
@@ -81,7 +81,7 @@ function Home() {
       </section>
 
 
-      
+
     </div>
   )
 }

@@ -78,7 +78,9 @@ function Footer() {
           <div className="footer-contact-item">
             <MdPhone size={32} className="footer-contact-icon phone" />
             <div className="footer-contact-texts">
-              <strong>Llámanos al +51 957 682 641</strong>
+              <strong>Llámanos a los numeros: 
+                <li className='footer-contact-texts-li'>+51 957 682 641</li>
+                <li className='footer-contact-texts-li'>+51 961 437 420</li></strong>
               <span>De lunes a domingo de 8:00 a 18:00 </span>
             </div>
           </div>

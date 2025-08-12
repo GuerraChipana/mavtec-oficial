@@ -1,0 +1,296 @@
+:root {
+  --color-primary: #021f59; /* Azul oscuro */
+  --color-secondary: #024873; /* Azul medio */
+  --color-tertiary: #025373; /* Azul claro */
+  --color-accent: #d9631e; /* Naranja quemado */
+  --color-light: #f2f2f0; /* Blanco grisáceo */
+  --color-white: #ffffff;
+  --color-gray-700: #4a4a4a;
+  --color-gray-600: #6b6b6b;
+
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 6px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Página ===== */
+.catmach-page {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Encabezado ===== */
+.catmach-top {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.catmach-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.catmach-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.4rem;
+}
+
+/* ===== Layout ===== */
+.catmach-layout {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== Sidebar ===== */
+.catmach-sidebar {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 260px;
+  box-shadow: var(--shadow-lg);
+}
+
+.catmach-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.catmach-count {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.catmach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catmach-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.catmach-list-item:hover {
+  background: var(--color-tertiary);
+  color: var(--color-white);
+}
+
+.catmach-active {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ===== Contenido principal ===== */
+.catmach-main {
+  flex: 1;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.catmach-main-top {
+  margin-bottom: 1.5rem;
+}
+
+.catmach-main-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.catmach-main-desc {
+  font-size: 1rem;
+  color: var(--color-gray-700);
+}
+
+/* ===== Cards ===== */
+.catmach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.catmach-card {
+  border-radius: 12px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.catmach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.catmach-card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.catmach-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.catmach-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.catmach-card-body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.catmach-card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.catmach-card-text {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  margin: 0.5rem 0 1rem;
+}
+
+.catmach-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ===== Botones ===== */
+.catmach-btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.catmach-btn-primary:hover {
+  background: var(--color-tertiary);
+}
+
+.catmach-btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.catmach-btn-outline:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ===== Modal ===== */
+.catmach-modal-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.catmach-modal {
+  background: var(--color-white);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+
+.catmach-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.catmach-modal-img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.catmach-modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catmach-modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.catmach-modal-content p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: var(--color-gray-700);
+}
+
+.catmach-specs {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+
+.catmach-modal-actions {
+  margin-top: 1rem;
+}
+
+.catmach-modal-actions .catmach-btn-primary {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}

@@ -114,6 +114,11 @@
   opacity: 0.8;
 }
 
+.footer-contact-texts-li{
+  list-style: none;
+}
+
+
 .footer-contact-link {
   display: inline-block;
   margin-top: 0.3rem;

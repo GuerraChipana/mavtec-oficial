@@ -11,7 +11,7 @@ function Slider() {
 
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="/slider01.jpg" className="slider-img" alt="Honda" />
+                    <img src="/slider1.png" className="slider-img" alt="Honda" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Honda</h5>
                         <p>Potencia y confiabilidad en cada motor.</p>
@@ -19,7 +19,7 @@ function Slider() {
                 </div>
 
                 <div className="carousel-item">
-                    <img src="/slider02.png" className="slider-img" alt="Kawasaki" />
+                    <img src="/slider2.png" className="slider-img" alt="Kawasaki" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Kawasaki</h5>
                         <p>Velocidad y diseño para los que buscan adrenalina.</p>

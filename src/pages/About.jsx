@@ -158,7 +158,7 @@ function About() {
                         En MAVTEC abastecemos tus proyectos con agua potable certificada y maquinaria moderna. Desde viviendas hasta grandes obras, somos tu aliado estratégico.
                     </p>
                     <div className="about-cta-buttons">
-                        <Link to="/" className="about-btn-primary">
+                        <Link to="/cotizaciones" className="about-btn-primary">
                             Solicitar Cotización
                         </Link>
 

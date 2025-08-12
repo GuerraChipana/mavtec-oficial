@@ -43,6 +43,21 @@
   width: 100%;
 }
 
+.close-menu-btn {
+  position: absolute;
+  top: 2rem;
+  right: 16rem;
+  background: transparent;
+  border: none;
+  /* cursor: pointer; */
+  z-index: 2001;
+  padding: 8px; /* más área clickeable */
+}
+
+.close-menu-btn svg {
+  pointer-events: none;
+}
+
 /* ====== OCULTAR ELEMENTOS SOLO EN MOBILE ====== */
 .only-mobile {
   display: block;
