@@ -1,0 +1,20 @@
+---
+deployment:
+  tasks:
+    # Definir ruta de despliegue
+    - export DEPLOYPATH=/home/otictaic/public_html
+
+    # Mover al directorio del repositorio
+    - cd /home/otictaic/repositories/mavtec-oficial
+
+    # Instalar dependencias
+    - /bin/npm install
+
+    # Construir el proyecto
+    - /bin/npm run build
+
+    # Limpiar el public_html antes de copiar
+    - /bin/rm -rf $DEPLOYPATH/*
+
+    # Copiar los archivos de build al public_html
+    - /bin/cp -R build/* $DEPLOYPATH
