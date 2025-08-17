@@ -20,7 +20,7 @@ function Slider() {
                 {/* Slide 1 - Cisterna */}
                 <div className="carousel-item active">
                     <div className="overlay"></div>
-                    <img src="slider2.png" className="slider-img" alt="Cisterna de maquinaria pesada" />
+                    <img src="/assets/slider2.png" className="slider-img" alt="Cisterna de maquinaria pesada" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Sistemas de Cisternas</h5>
                         <p>Soluciones industriales para transporte seguro y eficiente.</p>
@@ -31,7 +31,7 @@ function Slider() {
                 {/* Slide 2 - Maquinaria */}
                 <div className="carousel-item">
                     <div className="overlay"></div>
-                    <img src="slider1.png" className="slider-img" alt="Maquinaria pesada" />
+                    <img src="/assets/slider1.png" className="slider-img" alt="Maquinaria pesada" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Maquinaria de Alto Rendimiento</h5>
                         <p>Equipos confiables diseñados para maximizar tu productividad.</p>

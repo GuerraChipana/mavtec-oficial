@@ -65,7 +65,7 @@ function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <img src="Motoniveladora.png" alt="Maquinaria avanzada" />
+            <img src="/assets/Motoniveladora.png" alt="Maquinaria avanzada" />
           </motion.div>
         </div>
       </section>
@@ -224,10 +224,10 @@ function Home() {
       <section className="clients">
         <h2 className="section-title">Nuestros Socios y Clientes</h2>
         <div className="clients-logos">
-          <img src="p1-m.jpg" alt="Cliente 1" />
-          <img src="p2-h.jpg" alt="Cliente 2" />
-          <img src="p3-h.jpg" alt="Cliente 3" />
-          <img src="p4-m.jpg" alt="Cliente 4" />
+          <img src="/assets/p1-m.jpg" alt="Cliente 1" />
+          <img src="/assets/p2-h.jpg" alt="Cliente 2" />
+          <img src="/assets/p3-h.jpg" alt="Cliente 3" />
+          <img src="/assets/p4-m.jpg" alt="Cliente 4" />
         </div>
       </section>
 

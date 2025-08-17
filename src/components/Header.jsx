@@ -35,7 +35,7 @@ const Header = ({ }) => {
           <Link to="/" onClick={closeMenu}>
             <img
               className="header__logo-img"
-              src='VERTICAL-LOGO-WEB-AZUL.png'
+              src='/assets/VERTICAL-LOGO-WEB-AZUL.png'
               alt="Logo Oficial"
             />
           </Link>

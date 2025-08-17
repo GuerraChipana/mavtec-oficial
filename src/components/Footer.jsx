@@ -14,7 +14,7 @@ function Footer() {
 
         {/* Logo y descripción */}
         <div className="footer-logo-section">
-          <img src="logo-blanco-v.png" alt="logo-v" className="footer-logo" />
+          <img src="/assets/logo-blanco-v.png" alt="logo-v" className="footer-logo" />
           <div className="footer-logo-texts">
             <p className="footer-slogan">Soluciones confiables en maquinaria pesada</p>
           </div>

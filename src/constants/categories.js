@@ -10,35 +10,35 @@ export const categories = [
         name_machine: "Excavadora sobre oruga",
         description: "Para excavación profunda y carga de material.",
         marca: "Caterpillar",
-        image: "excavadora.png",
+        image: "/assets/excavadora.png",
       },
       {
         id_maquina: 102,
         name_machine: "Retroexcavadora con cuchara",
         description: "Excavación y carga de material, trabajos mixtos.",
         marca: "Komatsu",
-        image: "retro-cuchara.avif",
+        image: "/assets/retro-cuchara.avif",
       },
       {
         id_maquina: 106,
         name_machine: "Retroexcavadora con martillo neumático",
         description: "Demolición y rompimiento de superficies duras.",
         marca: "Hitachi",
-        image: "retro-martillo.png",
+        image: "/assets/retro-martillo.png",
       },
       {
         id_maquina: 105,
         name_machine: "Tractor sobre orugas",
         description: "Empuje y nivelación de grandes volúmenes de tierra.",
         marca: "Hitachi",
-        image: "Tractor-sobre-orugas.jpeg",
+        image: "/assets/Tractor-sobre-orugas.jpeg",
       },
       {
         id_maquina: 104,
         name_machine: "Motoniveladora",
         description: "Nivelación y perfilado de terrenos y carreteras.",
         marca: "Hitachi",
-        image: "Motoniveladora.png",
+        image: "/assets/Motoniveladora.png",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const categories = [
         description:
           "Carga rápida de materiales en volquetes, tolvas o plantas.",
         marca: "CAT",
-        image: "cargador-frontal.png",
+        image: "/assets/cargador-frontal.png",
       },
       {
         id_maquina: 202,
@@ -62,7 +62,7 @@ export const categories = [
         description:
           "Máquina versátil para maniobras en espacios reducidos y carga de diversos materiales.", // Updated description
         marca: "CAT",
-        image: "minicargadora.png",
+        image: "/assets/minicargadora.png",
       },
       {
         id_maquina: 203,
@@ -70,7 +70,7 @@ export const categories = [
         description:
           "Máquina versátil para maniobras en espacios reducidos y carga de diversos materiales.", // Updated description
         marca: "VOLVO",
-        image: "volquete-volvo.png",
+        image: "/assets/volquete-volvo.png",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const categories = [
         name_machine: "Rodillo compactador",
         description: "Compactación de suelos, asfalto y rellenos.",
         marca: "Bomag",
-        image: "rodillo.jpg",
+        image: "/assets/rodillo.jpg",
       },
     ],
   },
@@ -100,7 +100,7 @@ export const categories = [
         name_machine: "Camion Cisterna",
         description: "Transporte y distribución de agua o combustible.",
         marca: "Mercedes",
-        image: "cisterna.png",
+        image: "/assets/cisterna.png",
       },
     ],
   },

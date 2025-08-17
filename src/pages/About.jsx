@@ -71,7 +71,7 @@ function About() {
                         <div className="hero-image-container">
                             <div className="hero-image-wrapper">
                                 <img
-                                    src="excavadora.png"
+                                    src="/assets/excavadora.png"
                                     alt="maquinaria_Pesada"
                                     className="hero-image"
                                 />
