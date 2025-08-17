@@ -1,32 +1,46 @@
 import React from 'react';
 import '../styles/Slider.css';
+import { useNavigate } from 'react-router-dom';
 
 function Slider() {
+    const navigate = useNavigate();
+
     return (
         <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            {/* Indicadores */}
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
             </div>
 
+            {/* Slides */}
             <div className="carousel-inner">
+
+                {/* Slide 1 - Cisterna */}
                 <div className="carousel-item active">
-                    <img src="/slider1.png" className="slider-img" alt="Honda" />
+                    <div className="overlay"></div>
+                    <img src="slider2.png" className="slider-img" alt="Cisterna de maquinaria pesada" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Honda</h5>
-                        <p>Potencia y confiabilidad en cada motor.</p>
+                        <h5>Sistemas de Cisternas</h5>
+                        <p>Soluciones industriales para transporte seguro y eficiente.</p>
+                        <button onClick={() => navigate("/cotizaciones")} className="btn-slider">Solicitar Cotización</button>
                     </div>
                 </div>
 
+                {/* Slide 2 - Maquinaria */}
                 <div className="carousel-item">
-                    <img src="/slider2.png" className="slider-img" alt="Kawasaki" />
+                    <div className="overlay"></div>
+                    <img src="slider1.png" className="slider-img" alt="Maquinaria pesada" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Kawasaki</h5>
-                        <p>Velocidad y diseño para los que buscan adrenalina.</p>
+                        <h5>Maquinaria de Alto Rendimiento</h5>
+                        <p>Equipos confiables diseñados para maximizar tu productividad.</p>
+                        <button onClick={() => navigate("/categorias")} className="btn-slider">Explorar Equipos</button>
                     </div>
                 </div>
             </div>
 
+            {/* Botones de navegación */}
             <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Anterior</span>

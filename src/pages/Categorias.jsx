@@ -155,11 +155,11 @@ export default function Categorias() {
                   <p><strong>Marca:</strong> {machineDetails.marca}</p>
                   <p>{machineDetails.description}</p>
                   {/* <p><strong>ID Máquina:</strong> {machineDetails.id_maquina}</p> */}
-                  <ul className="catmach-specs">
+                  {/* <ul className="catmach-specs">
                     <li>Potencia: 150 HP</li>
                     <li>Peso: 20 toneladas</li>
                     <li>Uso recomendado: Obras grandes</li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="catmach-modal-actions">
                   <button className="catmach-btn-primary">Solicitar cotización</button>

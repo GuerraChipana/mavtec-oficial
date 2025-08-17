@@ -1,89 +1,92 @@
 /* =========================
-   General
+   Layout general
 ========================= */
-.cotizaciones-page {
+.coti-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
   background: #f5f7fa;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   color: #333;
+  padding: 2rem;
 }
 
 /* =========================
-   Títulos generales
+   Títulos
 ========================= */
-.main-title {
-  font-size: 2.3rem;
+.coti-title-main {
+  font-size: 2.4rem;
   font-weight: 800;
   text-align: center;
-  color: #023e73;
-  margin-bottom: 0.4rem;
+  color: #012a4a;
+  margin-bottom: 0.5rem;
 }
 
-.subtitle {
+.coti-subtitle {
   text-align: center;
-  color: #666;
-  font-size: 1.05rem;
+  color: #555;
+  font-size: 1rem;
   margin-bottom: 2.5rem;
 }
 
 /* =========================
    Formulario
 ========================= */
-.quote-form-section {
-  padding: 4rem 1rem;
-}
-
-.form-container {
+.coti-form-container {
   max-width: 950px;
   margin: auto;
 }
 
-.form-grid {
+.coti-form-grid {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-.form-card {
-  background: white;
+.coti-form-card {
+  background: #fff;
   padding: 2rem;
   border-radius: 0.8rem;
   border-left: 6px solid #d9631e;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease;
 }
 
-.form-card:hover {
+.coti-form-card:hover {
   transform: translateY(-3px);
 }
 
-.section-title {
-  font-size: 1.4rem;
+.coti-section-title {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #023e73;
-  border-bottom: 2px solid #f0f0f0;
+  color: #012a4a;
+  border-bottom: 2px solid #eee;
   padding-bottom: 0.6rem;
   margin-bottom: 1.2rem;
 }
 
-.input-grid {
+/* Inputs */
+.coti-input-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
 }
 
-.input-group {
+.coti-input-group {
   display: flex;
   flex-direction: column;
 }
 
-.form-label {
+.coti-label {
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
   color: #444;
 }
 
-.form-input {
+.coti-input,
+.coti-textarea,
+.coti-select {
   width: 100%;
   padding: 0.85rem 1rem;
   border: 1px solid #ccc;
@@ -92,26 +95,32 @@
   transition: border-color 0.25s, box-shadow 0.25s;
 }
 
-.form-input:focus {
+.coti-input:focus,
+.coti-textarea:focus,
+.coti-select:focus {
   outline: none;
-  border-color: #023e73;
-  box-shadow: 0 0 8px rgba(2, 62, 115, 0.15);
+  border-color: #012a4a;
+  box-shadow: 0 0 8px rgba(1, 42, 74, 0.15);
+}
+
+.coti-textarea {
+  resize: vertical;
 }
 
 /* =========================
    Maquinarias
 ========================= */
-.machinery-grid {
+.coti-machinery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 0.9rem;
 }
 
-.machinery-item {
+.coti-machinery-item {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   background: #fafafa;
@@ -120,30 +129,30 @@
   transition: all 0.25s ease;
 }
 
-.machinery-item:hover {
+.coti-machinery-item:hover {
   background: #eef5fb;
 }
 
-.machinery-item.selected {
-  background: linear-gradient(135deg, #023e73, #0356a3);
-  color: white;
-  border-color: #023e73;
-  box-shadow: 0 3px 10px rgba(2, 62, 115, 0.2);
+.coti-machinery-item.selected {
+  background: linear-gradient(135deg, #012a4a, #01497c);
+  color: #fff;
+  border-color: #012a4a;
+  box-shadow: 0 3px 12px rgba(1, 42, 74, 0.25);
 }
 
 /* =========================
    Botones
 ========================= */
-.form-buttons {
+.coti-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.btn-primary {
+.coti-btn-primary {
   background: linear-gradient(135deg, #d9631e, #e9772f);
-  color: white;
+  color: #fff;
   padding: 0.95rem 2.2rem;
   border-radius: 0.5rem;
   border: none;
@@ -154,53 +163,84 @@
   transition: transform 0.2s, box-shadow 0.3s ease;
 }
 
-.btn-primary:hover {
+.coti-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(217, 99, 30, 0.4);
 }
 
-.btn-primary:disabled {
+.coti-btn-primary:disabled {
   background: #ccc;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.btn-outline {
+.coti-btn-outline {
   background: transparent;
-  color: #023e73;
+  color: #012a4a;
   padding: 0.9rem 2.2rem;
   border-radius: 0.5rem;
-  border: 2px solid #023e73;
+  border: 2px solid #012a4a;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn-outline:hover {
-  background: #023e73;
+.coti-btn-outline:hover {
+  background: #012a4a;
   color: white;
-  box-shadow: 0 4px 12px rgba(2, 62, 115, 0.3);
+  box-shadow: 0 4px 12px rgba(1, 42, 74, 0.3);
 }
-
 
 /* =========================
-   Info Section
+   Info lateral
 ========================= */
-.quote-info {
-  background: #021f59;
-  color: white;
-  padding: 3rem 1rem;
+.coti-info {
+  background: linear-gradient(180deg, #012a4a, #001d3d);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.info-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.coti-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: space-evenly;
   text-align: center;
-  gap: 2rem;
 }
 
-.info-number {
-  font-size: 2rem;
+.coti-info-number {
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #d9631e;
+  color: #e9772f;
+  margin-bottom: 0.5rem;
+}
+
+.coti-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.coti-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+  .coti-page {
+    grid-template-columns: 1fr;
+  }
+
+  .coti-info {
+    margin-top: 2rem;
+  }
 }

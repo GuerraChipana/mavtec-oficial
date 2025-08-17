@@ -12,6 +12,10 @@
   --shadow-xl: 0 6px 32px rgba(0, 0, 0, 0.12);
 }
 
+:root {
+  --header-height: 100px;
+}
+
 html,
 body,
 #root {

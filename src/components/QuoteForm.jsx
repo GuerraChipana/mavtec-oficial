@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/cotizaciones.css";
+import { useNavigate } from 'react-router-dom';
 
 const maquinarias = [
   "Excavadora sobre orugas",
@@ -11,8 +12,8 @@ const maquinarias = [
   "Rodillo compactador",
   "Cisterna",
   "Volquetes",
-  "Minicargaror",
-  "Otros"
+  "Minicargador",
+  "Otros",
 ];
 
 const tipoProyecto = [
@@ -27,6 +28,7 @@ const tipoProyecto = [
 ];
 
 export default function QuoteForm() {
+  const navigate = useNavigate();
   const [selectedMaquinarias, setSelectedMaquinarias] = useState([]);
   const [formData, setFormData] = useState({
     nombre: "",
@@ -54,68 +56,102 @@ export default function QuoteForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Cotización enviada:", { ...formData, maquinarias: selectedMaquinarias });
-    alert("Cotización enviada exitosamente. Nos contactaremos contigo en las próximas 24 horas.");
+    alert("✅ Cotización enviada. Te contactaremos en las próximas 24h.");
   };
 
   return (
-    <section className="quote-form-section">
-      <div className="form-container">
-        <h1 className="main-title">Solicitud de Cotización</h1>
-        <p className="subtitle">Complete el formulario para recibir una cotización personalizada para su proyecto.</p>
+    <section className="coti-form-section">
+      <div className="coti-form-container">
+        <h1 className="coti-title-main">Solicitud de Cotización</h1>
+        <p className="coti-subtitle">
+          Completa el formulario para recibir una propuesta personalizada.
+        </p>
 
-        <form onSubmit={handleSubmit} className="form-grid">
+        <form onSubmit={handleSubmit} className="coti-form-grid">
 
           {/* Información de Contacto */}
-          <div className="form-card">
-            <h2 className="section-title">Información de Contacto</h2>
-            <div className="input-grid">
-              <input type="text" className="form-input" placeholder="Nombre Completo *" required value={formData.nombre} onChange={(e) => handleInputChange("nombre", e.target.value)} />
-              <input type="text" className="form-input" placeholder="Empresa" value={formData.empresa} onChange={(e) => handleInputChange("empresa", e.target.value)} />
-              <input type="email" className="form-input" placeholder="Email *" required value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} />
-              <input type="number" className="form-input" placeholder="RUC/DNI *" required value={formData.ruc} onChange={(e) => handleInputChange("ruc", e.target.value)} />
-              <input type="tel" className="form-input" placeholder="Teléfono *" required value={formData.telefono} onChange={(e) => handleInputChange("telefono", e.target.value)} />
+          <div className="coti-form-card">
+            <h2 className="coti-section-title">Información de Contacto</h2>
+            <div className="coti-input-grid">
+              <input
+                type="text"
+                className="coti-input"
+                placeholder="Nombre Completo *"
+                required
+                value={formData.nombre}
+                onChange={(e) => handleInputChange("nombre", e.target.value)}
+              />
+              <input
+                type="text"
+                className="coti-input"
+                placeholder="Empresa"
+                value={formData.empresa}
+                onChange={(e) => handleInputChange("empresa", e.target.value)}
+              />
+              <input
+                type="email"
+                className="coti-input"
+                placeholder="Email *"
+                required
+                value={formData.email}
+                onChange={(e) => handleInputChange("email", e.target.value)}
+              />
+              <input
+                type="number"
+                className="coti-input"
+                placeholder="RUC/DNI *"
+                required
+                value={formData.ruc}
+                onChange={(e) => handleInputChange("ruc", e.target.value)}
+              />
+              <input
+                type="tel"
+                className="coti-input"
+                placeholder="Teléfono *"
+                required
+                value={formData.telefono}
+                onChange={(e) => handleInputChange("telefono", e.target.value)}
+              />
             </div>
           </div>
 
           {/* Detalles del Proyecto */}
-          <div className="form-card">
-            <h2 className="section-title">Detalles del Proyecto</h2>
-            <div className="input-grid">
-              <div className="input-group">
-                <label className="form-label" htmlFor="ubicacion">Ubicación del Proyecto *</label>
+          <div className="coti-form-card">
+            <h2 className="coti-section-title">Detalles del Proyecto</h2>
+            <div className="coti-input-grid">
+              {/* <div className="coti-input-group">
+                <label className="coti-label" htmlFor="ubicacion">Ubicación *</label>
                 <input
                   id="ubicacion"
                   type="text"
-                  className="form-input"
+                  className="coti-input"
                   placeholder="Ej: Lima, Perú"
                   required
                   value={formData.ubicacion}
                   onChange={(e) => handleInputChange("ubicacion", e.target.value)}
                 />
-              </div>
-              <div className="input-group">
-                <label className="form-label" htmlFor="tipoProyecto">Tipo de Proyecto *</label>
+              </div> */}
+              <div className="coti-input-group">
+                <label className="coti-label" htmlFor="tipoProyecto">Tipo de Proyecto *</label>
                 <select
                   id="tipoProyecto"
-                  className="form-input"
+                  className="coti-select"
                   required
                   value={formData.tipoProyecto}
                   onChange={(e) => handleInputChange("tipoProyecto", e.target.value)}
                 >
-                  <option value="">Seleccione un tipo de proyecto</option>
+                  <option value="">Seleccione...</option>
                   {tipoProyecto.map((t) => (
-                    <option key={t} value={t}>
-                      {t}
-                    </option>
+                    <option key={t} value={t}>{t}</option>
                   ))}
                 </select>
               </div>
-              <div className="input-group">
-                <label className="form-label" htmlFor="duracionMeses">Duración (meses) *</label>
+              <div className="coti-input-group">
+                <label className="coti-label" htmlFor="duracionMeses">Duración (meses) *</label>
                 <input
                   id="duracionMeses"
                   type="number"
-                  className="form-input"
+                  className="coti-input"
                   placeholder="Ej: 12"
                   min="1"
                   required
@@ -123,12 +159,12 @@ export default function QuoteForm() {
                   onChange={(e) => handleInputChange("duracionMeses", e.target.value)}
                 />
               </div>
-              <div className="input-group">
-                <label className="form-label" htmlFor="fechaInicio">Inicio de Proyecto *</label>
+              <div className="coti-input-group">
+                <label className="coti-label" htmlFor="fechaInicio">Inicio *</label>
                 <input
                   id="fechaInicio"
                   type="date"
-                  className="form-input"
+                  className="coti-input"
                   required
                   value={formData.fechaInicio}
                   onChange={(e) => handleInputChange("fechaInicio", e.target.value)}
@@ -136,12 +172,16 @@ export default function QuoteForm() {
               </div>
             </div>
           </div>
+
           {/* Maquinaria */}
-          <div className="form-card">
-            <h2 className="section-title">Maquinaria Requerida *</h2>
-            <div className="machinery-grid">
+          <div className="coti-form-card">
+            <h2 className="coti-section-title">Maquinaria Requerida *</h2>
+            <div className="coti-machinery-grid">
               {maquinarias.map((m) => (
-                <label key={m} className={`machinery-item ${selectedMaquinarias.includes(m) ? "selected" : ""}`}>
+                <label
+                  key={m}
+                  className={`coti-machinery-item ${selectedMaquinarias.includes(m) ? "selected" : ""}`}
+                >
                   <input
                     type="checkbox"
                     checked={selectedMaquinarias.includes(m)}
@@ -154,10 +194,10 @@ export default function QuoteForm() {
           </div>
 
           {/* Información Adicional */}
-          <div className="form-card">
-            <h2 className="section-title">Información Adicional</h2>
+          <div className="coti-form-card">
+            <h2 className="coti-section-title">Información Adicional</h2>
             <textarea
-              className="form-input"
+              className="coti-textarea"
               placeholder="Detalles del proyecto..."
               value={formData.detalles}
               onChange={(e) => handleInputChange("detalles", e.target.value)}
@@ -166,9 +206,21 @@ export default function QuoteForm() {
           </div>
 
           {/* Botones */}
-          <div className="form-buttons">
-            <button type="submit" className="btn-primary" disabled={selectedMaquinarias.length === 0}>Enviar Solicitud</button>
-            <button type="button" className="btn-outline" onClick={() => window.history.back()}>Volver al Catálogo</button>
+          <div className="coti-buttons">
+            <button
+              type="submit"
+              className="coti-btn-primary"
+              disabled={selectedMaquinarias.length === 0}
+            >
+              Enviar Solicitud
+            </button>
+            <button
+              type="button"
+              className="coti-btn-outline"
+              onClick={() => navigate('/categorias')}
+            >
+              Volver al Catálogo
+            </button>
           </div>
         </form>
       </div>

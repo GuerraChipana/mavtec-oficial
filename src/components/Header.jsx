@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../styles/Header.css";
-import logoOficial from "/VERTICAL-LOGO-WEB-AZUL.png";
+// import logoOficial from "VERTICAL-LOGO-WEB-AZUL.png";
 
 
 const Header = ({ }) => {
@@ -35,7 +35,7 @@ const Header = ({ }) => {
           <Link to="/" onClick={closeMenu}>
             <img
               className="header__logo-img"
-              src={logoOficial}
+              src='VERTICAL-LOGO-WEB-AZUL.png'
               alt="Logo Oficial"
             />
           </Link>

@@ -4,8 +4,12 @@ import Aos from "aos";
 import { useEffect } from "react";
 import "/node_modules/aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
 
 function About() {
+    const navigate = useNavigate();
 
     useEffect(() => {
         Aos.init({
@@ -39,7 +43,6 @@ function About() {
         }
     ];
 
-
     return (
         <div className="about-page">
             <section className="hero-section">
@@ -60,7 +63,7 @@ function About() {
                                 <button className="button primary">
                                     Conoce Nuestros Servicios
                                 </button>
-                                <button className="button secundary">
+                                <button onClick={() => navigate("/categorias")} className="button secundary">
                                     Solicita Cotización
                                 </button>
                             </div>
@@ -68,7 +71,7 @@ function About() {
                         <div className="hero-image-container">
                             <div className="hero-image-wrapper">
                                 <img
-                                    src="/excavadora.png"
+                                    src="excavadora.png"
                                     alt="maquinaria_Pesada"
                                     className="hero-image"
                                 />
@@ -165,14 +168,13 @@ function About() {
                         <Link to="/categorias" className="about-btn-secondary">
                             Ver Servicios
                         </Link>
-
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }
+
 
 export default About
 

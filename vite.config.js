@@ -3,11 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/mavtec-oficial/",
+  // base: "/dist",
   plugins: [react()],
-  server: {
-    allowedHosts: [
-      ".ngrok-free.app", // Acepta cualquier subdominio de ngrok
-    ],
-  },
 });
