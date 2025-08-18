@@ -46,7 +46,7 @@
 .close-menu-btn {
   position: absolute;
   top: 2rem;
-  right: 16rem;
+  right: 0rem;
   background: transparent;
   border: none;
   /* cursor: pointer; */
@@ -76,7 +76,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
+    width: 60%;
     max-width: 320px;
     height: 100%;
     background: #021f59; /* azul oscuro */

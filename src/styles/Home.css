@@ -298,3 +298,128 @@
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
+
+
+
+/* --- GLOBAL --- */
+.home-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- INTRO --- */
+.intro-content {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.intro-text {
+  flex: 1 1 300px;
+}
+.intro-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- BENEFITS --- */
+.benefits {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.benefit {
+  flex: 1 1 150px;
+  justify-content: center;
+}
+
+/* --- SERVICES --- */
+.services-grid-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* --- PRODUCTS --- */
+.product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* --- WORKFLOW --- */
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- CLIENTES --- */
+.clients-logos {
+  justify-content: center;
+  gap: 1rem;
+}
+.clients-logos img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 2rem 1rem;
+  }
+  .intro-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .intro-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .services {
+    padding: 3rem 1rem;
+  }
+  .products,
+  .projects,
+  .workflow,
+  .testimonials,
+  .clients,
+  .cta {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.6rem;
+  }
+  .home-description {
+    font-size: 1rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
